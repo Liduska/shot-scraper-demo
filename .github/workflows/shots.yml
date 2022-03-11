@@ -35,7 +35,7 @@ jobs:
         shot-scraper install
     - name: Take shots
       run: |
-        timestamp=$(date -u)
+        timestamp=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
         shot-scraper https://uprimnytriko.cz/ -o ./screenshots/${timestamp}.png
     - name: Commit and push if anything changed
       run: |-
